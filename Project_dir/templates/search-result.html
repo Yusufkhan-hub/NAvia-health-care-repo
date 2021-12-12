@@ -1,0 +1,53 @@
+{% extends 'home.html' %}
+{% block result-search %}
+
+
+
+    <div class="row justify-content-md-center">
+      <!-- <div class="col col-lg-2">       
+      </div> -->
+      <div class="col-md-auto">
+        <h2>
+            Look What We Found..
+        </h2>
+      </div>
+      <!-- <div class="col col-lg-2">       
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col">       
+      </div>
+      <div class="col-md-auto">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                
+                <th scope="col">SKU NAME</th>
+                <th scope="col">PRICE</th>
+                <th scope="col">SALT NAME</th>
+                <th scope="col">DRUG NAME</th>
+                <th scope="col">STRENGTH</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for field in Medic %}
+              <tr>
+               
+                <td>{{field.sku_name}}</td>
+                <td>&#x20B9;{{field.price}}</td>
+                <td>{{field.salt_name}}</td>
+                <td>{{field.drug_form}}</td>
+                <td>{{field.strength}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+      <div class="col">       
+      </div>
+    </div>
+
+
+
+
+{% endblock result-search %}
