@@ -3,10 +3,11 @@ from .models import primary_model
 import logging
 # Create your views here.
 
-
+"""Home page"""
 def home(request):
     return render(request,'home.html')
 
+"""This is POST logic for manully fitering the data."""
 def result(request):
     if request.method=="POST":
         try:

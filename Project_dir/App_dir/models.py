@@ -26,4 +26,3 @@ class primary_model(models.Model):
         return "sku name" + self.sku_name + "and salt name is " + self.salt_name
 
     
-    
